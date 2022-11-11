@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AlunosModule } from './alunos/alunos.module';
 
 const routes: Routes = [
   {
-    path: '', pathMatch: 'full', redirectTo: 'alunos'
+    path: '', pathMatch: 'full', redirectTo: 'cursos/listacursos'
   },
   {
     path: 'cursos', loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule)
